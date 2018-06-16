@@ -6,14 +6,14 @@ class codeCracker {
 		String input = "";
 		String encryptedMessage = " ";
 	
-		char[] code = new char[] {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-		char[] cracked = new char[] {' ', '!', ')', '"', '(', '£', '*', '%', '&', '>', '<', '@', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'};
+		char[] code = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' '};
+		char[] cracked = {'!', ')', '"', '(', '£', '*', '%', '&', '>', '<', '@', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', ' '};
 		
 		
 		System.out.println("What is the message that you would like to encrypt?");
 		Scanner scan = new Scanner(System.in);
 		input = scan.nextLine();
-		input.toUpperCase();
+		input = input.toUpperCase();
 		char[] inputArray = input.toCharArray();
 		char[] encrypted = new char[inputArray.length];
 		
@@ -25,12 +25,10 @@ class codeCracker {
 			}
 		}
 		
-		System.out.print(cracked[0]);
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < encrypted.length; i++) {
 		encryptedMessage = sb.append(encrypted).toString();
-		}
+		
 		
 		System.out.println(encryptedMessage);
 		
